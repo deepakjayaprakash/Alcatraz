@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   
+    <?php
+        $myfile = fopen("data.txt","w");
+        fclose($myfile);
+    ?>
+    
   <title>Alcatraz</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,17 +70,20 @@
         </div>
         
         <div class="panel-body">
-          <div class="col-sm-12 form-group">
-          <input class="form-control" id="name" name="username" placeholder="User Name" type="text" required>
-              <br><br>
-          <input class="form-control" id="name" name="password" placeholder="Password" type="passoword" required>
+            <form action="register.php" method="POST">
+                
+              <div class="col-sm-12 form-group">
+              <input class="form-control"  name="username" placeholder="User Name" type="text" required>
+                  <br><br>
+              <input class="form-control"  name="password" placeholder="Password" type="passoword" required>
+                  <br><br>
+                <button type="submit" class="btn btn-lg">Sign Up</button>
               
+             </form>
         </div>
           
         </div>
-        <div class="panel-footer">
-          <a href="keystroke.html"><button class="btn btn-lg">Sign Up</button></a>
-        </div>
+        
          
       </div>      
     </div>     
@@ -132,3 +140,40 @@ $(document).ready(function(){
 
 </body>
 </html>
+
+
+
+
+<?php
+  mysql_connect("localhost", "root","") or die(mysql_error()); //Connect to server
+  mysql_select_db("keystroke") or die("Cannot connect to database"); //Connect to database
+
+  
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $username = mysql_real_escape_string($_POST['username']);
+  $password = mysql_real_escape_string($_POST['password']);
+    $bool = true;
+  
+  $query = mysql_query("Select * from users"); //Query the users table
+  while($row = mysql_fetch_array($query)) //display all rows from query
+  {
+    $table_users = $row['username']; // the first username row is passed on to $table_users, and so on until the query is finished
+    if($username == $table_users) // checks if there are any matching fields
+    {
+      $bool = false; // sets bool to false
+      Print '<script>alert("Username has been taken!");</script>'; //Prompts the user
+      Print '<script>window.location.assign("register.php");</script>'; // redirects to register.php
+    }
+  }
+  if($bool) // checks if bool is true
+  {
+    mysql_query("INSERT INTO users (username, password,done) VALUES ('$username','$password',0)"); //Inserts the value to table users
+    Print '<script>alert("Successfully Registered! Please Login with your credentials");</script>'; // Prompts the user
+    Print '<script>window.location.assign("register.php");</script>'; // redirects to register.php
+  }
+}
+?>
+
+
+
+

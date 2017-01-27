@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+    <?php
+            $myfile = fopen("data.txt","w");
+            fclose($myfile);
+    ?>
+    
   <title>Alcatraz</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,17 +69,19 @@
         </div>
         
         <div class="panel-body">
+            <form action="checklogin.php" method="POST">
           <div class="col-sm-12 form-group">
-          <input class="form-control" id="name" name="name" placeholder="User Name" type="text" required>
+          <input class="form-control" name="username" placeholder="User Name" type="text" required>
               <br><br>
-          <input class="form-control" id="name" name="name" placeholder="Password" type="passoword" required>
+          <input class="form-control"  name="password" placeholder="Password" type="password" required>
               
+               <br><br>
+              <button class="btn btn-lg">Sign In</button>
+              </form>
         </div>
           
         </div>
-        <div class="panel-footer">
-          <a href="keystroke.html"><button class="btn btn-lg">Sign In</button></a>
-        </div>
+       
           <h3>New user? <a href="register.php">Register</a></h3>
       </div>      
     </div>     
