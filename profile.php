@@ -19,6 +19,24 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
  
 </head>
+ 
+    
+    <?php
+	session_start(); //starts the session
+	if($_SESSION['user']){ //checks if user is logged in
+	}
+	else{
+		header("location:index.php"); // redirects if user is not logged in
+	}
+	$user = $_SESSION['user']; //assigns user value
+	if(isset($_SESSION['str'])&& isset($_SESSION['strn'])&& isset($_SESSION['strm'])){
+	$res=$_SESSION['str'];
+	$resn=$_SESSION['strn'];
+	$resm=$_SESSION['strm'];
+	}
+	?>
+
+    
     
     
 
@@ -54,9 +72,9 @@
  
  <div class="row">
   <div class="col-sm-2">
-  <h3>Hello <?php Print "$user"?>!</h3> 
+  
  
-
+<br><br>
   <ul class="nav nav-pills nav-stacked">
     <li class="active">
     <li><a data-toggle="pill" href="#keys">Enter keystroke</a></li>
@@ -69,7 +87,7 @@
 
   <div class="col-sm-10">
   <div class="tab-content">
-    
+    <br><br><br><br><br><br>
     <div id="keys" class="tab-pane fade">
       <h3>Enter Keystroke</h3>
       <p><a href="create_account.php">Go to create logistics page</a></p>

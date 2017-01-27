@@ -36,28 +36,25 @@
 					
 					if($done==1)
 					{
-						$res= shell_exec("\"C:/Program Files/R/R-3.2.0/bin/i386/Rscript.exe\" C:/xampp/htdocs/valkyrie/rscripts/user_identification.R $username $str") ;
+						$res= shell_exec("\"C:/Program Files/R/R-3.2.0/bin/i386/Rscript.exe\" C:/xampp/htdocs/valkyrie/rscripts/user_identification_euclidean.R $username $str 2>&1") ;
+						$res3= shell_exec("\"C:/Program Files/R/R-3.2.0/bin/i386/Rscript.exe\" C:/xampp/htdocs/valkyrie/rscripts/user_identification.R $username $str 2>&1") ;
+						$res4= shell_exec("\"C:/Program Files/R/R-3.2.0/bin/i386/Rscript.exe\" C:/xampp/htdocs/valkyrie/rscripts/user_identification_median.R $username $str 2>&1") ;
+						echo $res."<br>".$res3."<br>".$res4;
+						//echo $res;
+						$res2=$res;
 						$res=substr($res,5,3);
-						print $res;
-						if($res=="yes")
-						{
+						//print $res;
+						
 							$_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
+							$_SESSION['str'] = $res2;
+							$_SESSION['strn'] = $res3;
+
+							$_SESSION['strm'] = $res4;							
 							Print '<script>
-							alert("User Identification successful!");
 							window.location.assign("profile.php");</script>'; 
 
 							
-						}
-						else
-						{
-							//$_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
-
-							Print '<script>
-							alert("User Identification not  successful!");
-							window.location.assign("keystroke_demo.php");</script>'; 
-
-						
-						}		
+								
 								
 					}
 					else
@@ -77,12 +74,12 @@
 		else{
 
 					Print '<script>alert("Incorrect Password!");</script>'; //Prompts the user
-			Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
+			Print '<script>window.location.assign("keystroke_demo.php");</script>'; // redirects to login.php
 		}
 	}
 	else
 	{
 		Print '<script>alert("Incorrect Username!");</script>'; //Prompts the user
-		Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
+		Print '<script>window.location.assign("keystroke_demo.php");</script>'; // redirects to login.php
 	}
 ?>

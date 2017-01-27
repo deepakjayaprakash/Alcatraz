@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <?php
-            $myfile = fopen("data.txt","w");
-            fclose($myfile);
+        $myfile = fopen("data.txt","w");
+        fclose($myfile);
     ?>
     
   <title>Alcatraz</title>
@@ -22,9 +23,17 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
  
+      <?php
+    session_start(); //starts the session
+    if($_SESSION['user']){ //checks if user is logged in
+    }
+    else{
+        header("location:index.php"); // redirects if user is not logged in
+    }
+    $user = $_SESSION['user']; //assigns user value
+    ?>
     
-    
-<script type="text/javascript">
+    <script type="text/javascript">
         var s=new Array(7);
         var first= new Array(7),last= new Array(7);
         var diff = new Array(7);
@@ -35,22 +44,24 @@
             i[k]=0;
         }
 
-          function keypress (d) 
+          function keypress (d,no) 
           {
-            //var x=document.getElementById("demo");
+            var x=document.getElementById(d);
+            var t=document.getElementById("demo");
             var evt = event || e; // for trans-browser compatibility
                 var charCode = evt.which || evt.keyCode;
             d=new Date();
             curr=d.getTime();
             if(charCode==8)
             {
-                window.alert("Backspace kyu dabaya be!");
-                window.location="index.php"
+                alert("backspace kyu dabaya be!");
+                window.location.assign("create_account.php");
 
             }
-            else if(charCode!=9) 
-            {   
-               // x.innerHTML+=" "+curr;
+            else if(charCode!=9)
+            {
+
+                x.innerHTML+=" "+curr;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -85,56 +96,46 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="keystroke.html">HOME</a></li>
-        <li><a href="register.php">REGISTER</a></li>
+        <li><a href="keystroke_demo.php">LOGIN</a></li>
         
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="jumbotron text-center">
-  <h1>Keystroke Biometric Authentication </h1> 
-   
-</div>
 
-
-
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
-  <div class="text-center">
-    <h1>Demo</h1>
-   
-  </div>
-  <div class="row slideanim">
+<div class="container" align="center">
+  <div class="reg" >
+    
+    <br><br><br>
+    <p><b>Start typing the password in the input field below:</b>
+    </p>
       
-    <div class="col-sm-6 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Login</h1>
-        </div>
-        
-        <div class="panel-body">
-            <form action="checklogin.php" method="POST">
-          <div class="col-sm-12 form-group">
-          <input class="form-control" name="username" placeholder="User Name" type="text" required>
-              <br><br>
-          <input class="form-control"  name="password" placeholder="Password" onkeyup="javascript:keypress('password')" type="password" required>
-              
-               <br><br>
-              <button class="btn btn-lg">Sign In</button>
-              </form>
-        </div>
-          
-        </div>
-       
-          <h3>New user? <a href="register.php">Register</a></h3>
-      </div>      
-    </div>     
-      
-      
-  </div>
-</div>
+        <form action="validate.php" method="post"> 
 
+        Enter a string 1:<br>
+          <input type="text" onkeyup="javascript:keypress('date1',1)" name="id1"><p id="date1">0</p><br>
+
+        Enter a string 2:<br>
+          <input type="text" onkeyup="javascript:keypress('date2',2)"name="id2"><p id="date2">0</p><br>
+
+        Enter a string 3:<br>
+          <input type="text" onkeyup="javascript:keypress('date3',3)" name="id3"><p id="date3">0</p><br>
+        Enter a string 4:<br>
+          <input type="text" onkeyup="javascript:keypress('date4',4)" name="id4"><p id="date4">0</p><br>
+        Enter a string 5:<br>
+          <input type="text" onkeyup="javascript:keypress('date5',5)" name="id5"><p id="date5">0</p><br>
+        Enter a string 6:<br>
+          <input type="text" onkeyup="javascript:keypress('date6',6)" name="id6"><p id="date6">0</p><br>
+
+          <button type="submit">Submit</button>
+            </form>
+      </div>
+    </div>
+
+
+    
+    
 
 
 <footer class="container-fluid text-center">
@@ -183,3 +184,40 @@ $(document).ready(function(){
 
 </body>
 </html>
+
+
+
+
+<?php
+  mysql_connect("localhost", "root","") or die(mysql_error()); //Connect to server
+  mysql_select_db("keystroke") or die("Cannot connect to database"); //Connect to database
+
+  
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $username = mysql_real_escape_string($_POST['username']);
+  $password = mysql_real_escape_string($_POST['password']);
+    $bool = true;
+  
+  $query = mysql_query("Select * from users"); //Query the users table
+  while($row = mysql_fetch_array($query)) //display all rows from query
+  {
+    $table_users = $row['username']; // the first username row is passed on to $table_users, and so on until the query is finished
+    if($username == $table_users) // checks if there are any matching fields
+    {
+      $bool = false; // sets bool to false
+      Print '<script>alert("Username has been taken!");</script>'; //Prompts the user
+      Print '<script>window.location.assign("register.php");</script>'; // redirects to register.php
+    }
+  }
+  if($bool) // checks if bool is true
+  {
+    mysql_query("INSERT INTO users (username, password,done) VALUES ('$username','$password',0)"); //Inserts the value to table users
+    Print '<script>alert("Successfully Registered! Please Login with your credentials");</script>'; // Prompts the user
+    Print '<script>window.location.assign("register.php");</script>'; // redirects to register.php
+  }
+}
+?>
+
+
+
+
