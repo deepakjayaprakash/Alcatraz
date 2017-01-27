@@ -8,25 +8,23 @@ AIM: Developers need to adress the issue of security at each module while develo
 
 Services:
 1. Keystroke Biometric Authentication:
-Biometric attributes become the most optimal and ideal candidates for authentication since they cannot be stolen, lost or impersonated. 
-The most promising approach has been Keystroke biometrics which refers to the habitual patterns or rhythms an individual exhibits while typing on a keyboard input device. Compared to other biometric schemas, keystroke has the primary advantages that: 
+    Biometric attributes become the most optimal and ideal candidates for authentication since they cannot be stolen, lost or impersonated. 
+    The most promising approach has been Keystroke biometrics which refers to the habitual patterns or rhythms an individual exhibits while typing on a keyboard input device. Compared to other biometric schemas, keystroke has the primary advantages that: 
 
-No external hardware like scanner or detector is needed. All that is wanted is a keyboard.
-The “rhythm” or the pattern of the users is a very reliable statistic.
-It can easily be deployed in conjunction with existing authentication systems.
-DESIGN AND IMPLEMENTATION
-
-
-A dataset is created to evaluate the proposed system. A software application validates the entered data at the time of registration and the credentials are implemented to acquire samples from individuals and extract their features. The user has to simply type his username and passwords that they can comfortably type and the rhythm of which they can easily remember. 
-
-The threshold calculation is what makes the model adaptive and different than other existing models and algorithms. The window for error is the space in which he is permitted to cause any errors. This is decided by a method called Leave One-Out-Method (LOOM).
+    No external hardware like scanner or detector is needed. All that is wanted is a keyboard.
+    The “rhythm” or the pattern of the users is a very reliable statistic.
+    It can easily be deployed in conjunction with existing authentication systems.
+    DESIGN AND IMPLEMENTATION
 
 
+    A dataset is created to evaluate the proposed system. A software application validates the entered data at the time of registration and the credentials are implemented to acquire samples from individuals and extract their features. The user has to simply type his username and passwords that they can comfortably type and the rhythm of which they can easily remember. 
 
-Tech used:
-HTML5, jQuery, Bootstrap: For the front end and creation of forms to accept the data from the user
-JavaScript: To perform the front end validations and also to gather the key up time from the user
-Ajax: To parse the timing data from the frontend JavaScript to the PHP
-PHP: To perform all the file operations and IO
-R: To build the model and to calculate the threshold.
-MySql: To store the user id’s and the passwords and to maintain session information
+    The threshold calculation is what makes the model adaptive and different than other existing models and algorithms. The window for error is the space in which he is permitted to cause any errors. This is decided by a method called Leave One-Out-Method (LOOM).
+
+        Tech used:
+        HTML5, jQuery, Bootstrap: For the front end and creation of forms to accept the data from the user
+        JavaScript: To perform the front end validations and also to gather the key up time from the user
+        Ajax: To parse the timing data from the frontend JavaScript to the PHP
+        PHP: To perform all the file operations and IO
+        R: To build the model and to calculate the threshold.
+        MySql: To store the user id’s and the passwords and to maintain session information
