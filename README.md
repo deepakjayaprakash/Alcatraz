@@ -8,8 +8,8 @@ AIM: Developers need to adress the issue of security at each module while develo
 
 Services:
 1. Keystroke Biometric Authentication:
-    Biometric attributes become the most optimal and ideal candidates for authentication since they cannot be stolen, lost or impersonated. 
-    The most promising approach has been Keystroke biometrics which refers to the habitual patterns or rhythms an individual exhibits while typing on a keyboard input device. Compared to other biometric schemas, keystroke has the primary advantages that: 
+        Biometric attributes become the most optimal and ideal candidates for authentication since they cannot be stolen, lost or impersonated. 
+        The most promising approach has been Keystroke biometrics which refers to the habitual patterns or rhythms an individual exhibits while typing on a keyboard input device. Compared to other biometric schemas, keystroke has the primary advantages that: 
 
     No external hardware like scanner or detector is needed. All that is wanted is a keyboard.
     The “rhythm” or the pattern of the users is a very reliable statistic.
