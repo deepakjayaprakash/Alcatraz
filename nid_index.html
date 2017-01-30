@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Alcatraz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+ 
+</head>
+    
+    
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">DATA SET</a></li>
+        <li><a href="#portfolio">VIEW</a></li>
+        <li><a href="#pricing">DEMO</a></li>
+        <li><a href="#contact">GITHUB</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Network Intrusion Detection </h1> 
+   
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Description</h2><br>
+      <h4>With the exponential growth of internet communication technology and the number of applications running on top of it, the network traffic is increasing in accordance with it  <br> Hence the risk posed to network security becomes a hot topic involved in research.<br><br>Therefore, the role of Intrusion Detection Systems (IDSs), as special-purpose devices to detect anomalies and attacks in the network, is becoming more important. IDSs are impressive since it can detect, prevent and possibly react to attacks in an efficient manner.<br> <br> Classification of IDSs:
+          <br><br>
+        <ul>
+        <li><b>Network intrusion detection systems:</b> NIDS are placed at a strategic point or points within the network to monitor traffic to and from all devices on the network.  </li><br>
+        <li><b>Host intrusion detection systems:</b> HIDS run on individual hosts or devices on the network. A HIDS monitors the inbound and outbound packets from the device only and will alert the user or administrator if suspicious activity is detected.   </li>
+       
+          
+        </ul>   </h4><br>
+      
+      <br>
+    </div>
+    <div class="col-sm-4">
+    
+    </div>
+  </div>
+</div>
+    
+<div id="services" class="container-fluid">
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Data set description </h2><br>
+      <h4>The NSL-KDD data set is the refined version of the KDD cup99 data set. The original DARPA data set is not used because of a number of prominent reasons. The first important deficiency in the KDD data set is the huge number of redundant records. The existence of these repeated records in the test set, on the other hand, will cause the evaluation results to be biased.  <br><br>
+      The attributes can divided into 4 kinds of categories depending upon what it signifies. 
+          <ol>
+          
+          <li><b>Basic features: </b>These include attributes which are present in every internet traffic tuple. Example for basic features are Duration, Protocol_type,  Service, Flag, Src_bytes, Dst_Bytes, Land, Wrong_fragment, Urgent.</li>
+         
+          <li><b>Content related features:</b>These features are specific to parameters like whether the user is attempting any file accesses or root access, etc. The examples are Hot, Num_failed _logins, Num_comp romised, Logged_in, Root_shell, Su_attempt ed, Num_file_c reations, Is_guest_lo gin, etc</li>
+              
+          <li><b>Time related features:</b>These determine the number of connections which have similar features in the last few seconds. Examples  are Count, Srv_count, Serror_rate, Srv_serror_rate,Rerror_rate, Same_srv_rate,etc.</li>
+              
+          <li><b>Host based traffic features:</b>They describe the frequency of queries for same IP, same service, flag, ports, etc. Examples are Dst_host_coun t, Dst_host_same_srv_rate, Dst_host_srv_ diff_host_rate, Dst_host_rerro r_rate, Dst_host_same _src_port_rate, etc  </li>
+          
+          </ol>
+        </h4><br><br>
+      <h4><strong>Tech used:</strong> 
+          <ul>
+          <li> HTML5, jQuery, Bootstrap: For the front end. </li>
+          <li>PHP: To interface R through the web. </li>
+          <li>R: To build the model and analyze the data set. </li>
+         
+          </ul>
+      </h4>
+    </div>
+  </div>
+    </div></div>
+
+    
+<div id="pricing" class="container-fluid">    
+<div class="jumbotron text-center">
+  <h1>DEMO</h1> 
+  <p>Give it a try and see what it feels like !</p> 
+  <form>
+    <div class="input-group">
+     
+      <div class="input-group-btn">
+        <a href="nid_demo.php"><button type="button" class="btn btn-danger">Demo</button></a>
+      </div>
+    </div>
+  </form>
+</div>
+    </div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p style="background:#181a1b; color:white">Copyrights© reserved by CodeBlooded</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
