@@ -67,6 +67,7 @@
     </script>
     
     
+    
 </head>
     
     
@@ -80,7 +81,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">Alcatraz</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -107,7 +108,7 @@
   </div>
   <div class="row slideanim">
       
-    <div class="col-sm-6 col-xs-12">
+    <div class="col-sm-6 col-xs-12" >
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Login</h1>

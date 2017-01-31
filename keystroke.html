@@ -18,6 +18,16 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
  
+    
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+    
+    
 </head>
     
     
@@ -31,14 +41,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">Alcatraz</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#services">DESIGN</a></li>
-        <li><a href="#portfolio">VIEW</a></li>
+        <li><a href="#view">VIEW</a></li>
         <li><a href="#pricing">DEMO</a></li>
         <li><a href="#contact">GITHUB</a></li>
       </ul>
@@ -46,7 +56,9 @@
   </div>
 </nav>
 
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" style="background-image: url('images/keyboard.jpg');
+    background-repeat: no-repeat;     background-position: center center;
+    background-attachment: fixed;background-size:cover;height:640px;opacity:0.9"><br><br><br><br><br><br><br>
   <h1>Keystroke Biometric Authentication </h1> 
    
 </div>
@@ -98,6 +110,52 @@
   </div>
     </div></div>
 
+    
+    
+ 
+<div class="container" id="view">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/keyboard.jpg" alt="Chania" >
+      </div>
+
+      <div class="item">
+        <img src="images/cyberattack.jpg" alt="Chania" >
+      </div>
+    
+      <div class="item">
+        <img src="images/keyboard.jpg" alt="Flower" >
+      </div>
+
+      <div class="item">
+        <img src="images/keyboard2.PNG" alt="Flower" >
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    
+    
     
 <div id="pricing" class="container-fluid">    
 <div class="jumbotron text-center">
