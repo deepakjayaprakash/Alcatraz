@@ -6,11 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
 
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
@@ -18,6 +17,16 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
  
+    
+    <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 90%;
+      margin: auto;
+  }
+   
+        .carousel-caption{color: black}
+  </style>
     
 </head>
     
@@ -104,7 +113,104 @@
   <div class="row">
     <div class="col-sm-8">
         <h1>Visualization</h1>
-      <h2>Naive Bayes</h2><br>
+      <h2>Attribute selection</h2><br>
+    
+        
+<button data-toggle="collapse" data-target="#demo" class="btn btn-info">View</button>
+<div id="demo" class="collapse">
+
+    
+<div class="container" id="view">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+           <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+     
+
+      <div class="item active">
+        <img src="images/attributes/duration_vs_srcbytes.PNG"  >
+          <div class="carousel-caption">
+        <h3>duration vs src_bytes</h3>
+        
+      </div> 
+      </div>
+    
+      <div class="item">
+        <img src="images/attributes/flag_vs_service.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs service</h3>
+        
+      </div> 
+      </div>
+
+      <div class="item">
+        <img src="images/attributes/port_vs_host.PNG"  >
+          <div class="carousel-caption">
+        <h3>port vs host</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_decision_tree.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_pt_loggedin_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs logged_in</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/serr-vs_srverror.PNG"  >
+          <div class="carousel-caption">
+        <h3>serr vs srverror</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/protocol_type_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>protocol type dt</h3>
+        
+      </div> 
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    
+    
+</div> 
+        
       
       
       
@@ -117,8 +223,219 @@
 
   <div class="row">
     <div class="col-sm-8">
+      <h2>naive Bayes</h2><br>
+      
+           
+        
+<button data-toggle="collapse" data-target="#demo" class="btn btn-info">View</button>
+<div id="demo" class="collapse">
+
+    
+<div class="container" id="view">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+           <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+     
+
+      <div class="item active">
+        <img src="images/attributes/duration_vs_srcbytes.PNG"  >
+          <div class="carousel-caption">
+        <h3>duration vs src_bytes</h3>
+        
+      </div> 
+      </div>
+    
+      <div class="item">
+        <img src="images/attributes/flag_vs_service.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs service</h3>
+        
+      </div> 
+      </div>
+
+      <div class="item">
+        <img src="images/attributes/port_vs_host.PNG"  >
+          <div class="carousel-caption">
+        <h3>port vs host</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_decision_tree.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_pt_loggedin_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs logged_in</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/serr-vs_srverror.PNG"  >
+          <div class="carousel-caption">
+        <h3>serr vs srverror</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/protocol_type_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>protocol type dt</h3>
+        
+      </div> 
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    
+    
+</div> 
+        
+     
+      
+      
+      
+      <br>
+    </div>
+    
+  </div>
+    
+            
+            
+            
+ <div class="row">
+    <div class="col-sm-8">
       <h2>Random Forests</h2><br>
       
+           
+        
+<button data-toggle="collapse" data-target="#demo" class="btn btn-info">View</button>
+<div id="demo" class="collapse">
+
+    
+<div class="container" id="view">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+           <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+     
+
+      <div class="item active">
+        <img src="images/attributes/duration_vs_srcbytes.PNG"  >
+          <div class="carousel-caption">
+        <h3>duration vs src_bytes</h3>
+        
+      </div> 
+      </div>
+    
+      <div class="item">
+        <img src="images/attributes/flag_vs_service.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs service</h3>
+        
+      </div> 
+      </div>
+
+      <div class="item">
+        <img src="images/attributes/port_vs_host.PNG"  >
+          <div class="carousel-caption">
+        <h3>port vs host</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_decision_tree.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_pt_loggedin_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs logged_in</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/serr-vs_srverror.PNG"  >
+          <div class="carousel-caption">
+        <h3>serr vs srverror</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/protocol_type_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>protocol type dt</h3>
+        
+      </div> 
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    
+    
+</div> 
+        
+     
       
       
       
@@ -127,11 +444,110 @@
     
   </div>
             
+            
+            
   <div class="row">
     <div class="col-sm-8">
       <h2>Decision Trees</h2><br>
       
-      
+         
+        
+<button data-toggle="collapse" data-target="#demo" class="btn btn-info">View</button>
+<div id="demo" class="collapse">
+
+    
+<div class="container" id="view">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+           <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+     
+
+      <div class="item active">
+        <img src="images/attributes/duration_vs_srcbytes.PNG"  >
+          <div class="carousel-caption">
+        <h3>duration vs src_bytes</h3>
+        
+      </div> 
+      </div>
+    
+      <div class="item">
+        <img src="images/attributes/flag_vs_service.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs service</h3>
+        
+      </div> 
+      </div>
+
+      <div class="item">
+        <img src="images/attributes/port_vs_host.PNG"  >
+          <div class="carousel-caption">
+        <h3>port vs host</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_decision_tree.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag</h3>
+        
+      </div> 
+      </div>
+        
+         <div class="item">
+        <img src="images/attributes/flag_pt_loggedin_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>flag vs logged_in</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/serr-vs_srverror.PNG"  >
+          <div class="carousel-caption">
+        <h3>serr vs srverror</h3>
+        
+      </div> 
+      </div>
+        
+        <div class="item">
+        <img src="images/attributes/protocol_type_dt.PNG"  >
+          <div class="carousel-caption">
+        <h3>protocol type dt</h3>
+        
+      </div> 
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    
+    
+</div> 
+        
+     
       
       
       <br>
