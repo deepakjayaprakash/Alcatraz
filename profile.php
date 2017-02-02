@@ -77,6 +77,7 @@
 <br><br>
   <ul class="nav nav-pills nav-stacked">
     <li class="active">
+   <!-- <li><a data-toggle="pill" href="#dashborad">Dash Board</a></li> -->
     <li><a data-toggle="pill" href="#keys">Enter keystroke</a></li>
     <li><a data-toggle="pill" href="#man">Manhattan</a></li>
     <li><a data-toggle="pill" href="#euc">Eucledian </a></li>
@@ -87,7 +88,9 @@
 
   <div class="col-sm-10">
   <div class="tab-content">
-    <br><br><br><br><br><br>
+    <br><br>
+      
+      
     <div id="keys" class="tab-pane fade">
       <h3>Enter Keystroke</h3>
       <p><a href="create_account.php">Go to create logistics page</a></p>
@@ -106,8 +109,47 @@
       <?php Print "$resm" ?>
     </div>
     <div id="ens" class="tab-pane fade in active">
-      <h3>Ensemble Result </h3>
-      <?php 
+        
+        
+        <div class="container" style="width:100%;">
+  <h1>Dash Board</h1>
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">What is Ensemble result?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">Ensemble is a way of combining the results of all the models built and drawing a cumulative conclusion taking into consideration all the individual results of the models.<br>
+          It is bagging and bootstrapping way of arriving at the results. Here, in our analysis, the result is the majority of all the 3 models built. </div>
+       
+    </div>
+  </div>
+</div>
+    
+   
+        
+        <div class="jumbotron text-center" style="background-image: url('images/keyboard.jpg');
+    background-repeat: no-repeat;     background-position: center center;
+    background-attachment: fixed;background-size:cover;height:400px;opacity:0.9"><br><br>
+  <h1>Dash Board </h1> 
+   
+     
+            
+</div>
+         
+        <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">View results</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body"><br>
+             <?php 
       $count=0;
       if(isset($_SESSION['str'])){
       if(strpos($res, "yes")!==false)
@@ -128,6 +170,17 @@
   	}
        ?>
   	
+            
+            
+            
+          </div>
+       
+    </div>
+  </div>
+</div>
+            
+            
+     
     </div>
   </div>
   </div>

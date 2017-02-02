@@ -101,13 +101,15 @@
 
 
 <!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
+<div id="pricing" class="container-fluid" >
   <div class="text-center">
     <h1>Demo</h1>
    
   </div>
-  <div class="row slideanim">
-      
+    
+  <div class="row slideanim" style="margin:auto">
+       <div class="col-sm-3 col-xs-12" >
+      </div>
     <div class="col-sm-6 col-xs-12" >
       <div class="panel panel-default text-center">
         <div class="panel-heading">

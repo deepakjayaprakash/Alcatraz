@@ -62,7 +62,8 @@
    
   </div>
   <div class="row slideanim">
-      
+      <div class="col-sm-3 col-xs-12" >
+      </div>
     <div class="col-sm-6 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
