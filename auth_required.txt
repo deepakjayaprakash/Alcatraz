@@ -1,0 +1,16 @@
+{
+"pages":
+        [
+        {"name":"form1",
+        "auth_required":1},
+        
+        {"name":"form2",
+        "auth_required":0},
+        
+        {"name":"form3",
+        "auth_required":1}
+        
+        ]
+
+
+}
