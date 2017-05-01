@@ -56,10 +56,10 @@
   </div>
 </nav>
 
-<div class="jumbotron text-center" style="background-image: url('images/keyboard.jpg');
+<div class="jumbotron text-center" style="background-image: url('images/antikeylogger.jpg');
     background-repeat: no-repeat;     background-position: center center;
     background-attachment: fixed;background-size:cover;height:640px;opacity:0.9"><br><br><br><br><br><br><br>
-  <h1>Keystroke Biometric Authentication </h1> 
+  <h1>Anti Keylogger </h1> 
    
 </div>
 
@@ -77,7 +77,8 @@ The stealthy keylogger cannot be detected by many Anti-viruses software as runni
       <br>
     </div>
     <div class="col-sm-4">
-    
+        <br><br><br>
+    <img src="images/keylogger.jpg" width="100%">
     </div>
   </div>
 </div>
@@ -86,13 +87,37 @@ The stealthy keylogger cannot be detected by many Anti-viruses software as runni
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+        <br><br><br>
+      <img src="images/arch_antikeylogging.png" width="100%">
+        <br><br>
+        <h2>Advantages of our system</h2>
+        <ul>
+        <li>Data Confidentiality</li>
+        <li>Data Integrity</li>
+        <li>Universal standardization of Auth mehcanism</li>
+        <li>Multi level authorization</li>
+        </ul>
     </div>
     <div class="col-sm-8">
       <h2>Design and Implementation </h2><br>
-      <h4>A dataset is created to evaluate the proposed system. A software application validates the entered data at the time of registration and the credentials are implemented to acquire samples from individuals and extract their features. The user has to  simply type his username and passwords that they can comfortably type and the rhythm of which they can easily remember. <br><br>
-      <h4>A dataset is created to evaluate the proposed system. A software application validates the entered data at the time of registration and the credentials are implemented to acquire samples from individuals and extract their features. The user has to  simply type his username and passwords that they can comfortably type and the rhythm of which they can easily remember. <br><br>
-      The threshold calculation is what makes the model adaptive and different than other existing models and algorithms. The window for error is the space in which he is permitted to cause any errors. This is decided by a method called Leave One-Out-Method (LOOM). 
+      <h4> <br><br>
+      <h4> The architecture is dovided into server-side and client-side. 
+          The host site will have a number of web pages out of which only some may require the anti keylogging feature. Below is the set of steps involved in the flow/ design.
+          <br><br>
+          <ol>
+              <li>The client side forms and applications are embedded with an attribute called form_name.</li>
+              <li>The form elements along with this attribute is sent to the antikey.php which finds out whether this page needs to be encrypted or not.</li>
+              <li>If the page does not need anti keylogging usual flow is proceeded.</li>
+              <li>Now the paramters are encrypted using the AES encryption algorithm.</li>
+              <li>The trick to our model is the generation of the encryption key.</li>
+              <li>The key has to generated dynamically so that any XSS attempt is a failure.</li>
+              <li>Hence, we use a hash function to generate a dynamic hash. To make it dynamic we use the paramters entered by the user itself.</li>
+              <li>In OAuth terms a GET request is sent to the server, with a [client_id, {subset of form elements}]. The server has a has function which replies with a hash code.</li>
+              <li>This hashCode is now used as the encryption key and then the form elements are sent to the destination page</li>
+          
+          </ol>
+          <br><br>
+     
         </h4><br><br>
       <h4><strong>Tech used:</strong> 
           <ul>
@@ -100,8 +125,8 @@ The stealthy keylogger cannot be detected by many Anti-viruses software as runni
           <li>JavaScript: To perform the front end validations and also to gather the key up time from the user </li>
           <li>Ajax: To parse the timing data from the frontend JavaScript to the PHP </li>
           <li>PHP: To perform all the file operations and IO </li>
-          <li>R: To build the model and to calculate the threshold. </li>
-          <li>MySql: To store the user id’s and the passwords and to maintain session information </li>
+         
+          <li>JSON: To store the user id’s and the passwords and to maintain session information </li>
           </ul>
       </h4>
     </div>
@@ -111,46 +136,7 @@ The stealthy keylogger cannot be detected by many Anti-viruses software as runni
     
     
  
-<div class="container" id="view">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="images/keystroke1.PNG" alt="Chania" >
-      </div>
-
-      <div class="item">
-        <img src="images/keystroke2.PNG" alt="Chania" >
-      </div>
-    
-      <div class="item">
-        <img src="images/keystroke3.PNG" alt="Flower" >
-      </div>
-
-      <div class="item">
-        <img src="images/keystroke4.PNG" alt="Flower" >
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
 
     
     
